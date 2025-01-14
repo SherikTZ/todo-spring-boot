@@ -1,0 +1,16 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+    volumes:
+      - db-data:/var/lib/mysql
+volumes:
+  db-data:
