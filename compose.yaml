@@ -7,10 +7,15 @@ services:
       - "8080:8080"
   mysql:
     container_name: mysql
-    image: mysql
+    image: mysql:latest
     environment:
+      - MYSQL_DATABASE=tododb
+      - MYSQL_PASSWORD=example
       - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_USER=myuser
     volumes:
       - db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
 volumes:
   db-data:
