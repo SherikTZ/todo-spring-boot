@@ -199,3 +199,6 @@ README.html
 *.iml
 .idea
 .exercism
+
+### Run Script
+run.sh
