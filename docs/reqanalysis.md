@@ -69,8 +69,8 @@ Given task content create a new task with title, description and status and stor
 
 - OK (200) task deleted
 - 400 (Bad Request)\
-   ID is missing\
-   title is empty\
+   ID is incorrect
+  title is empty\
    description is empty\
    title is above maximum length of 255 characters\
    text is above length of 65,535 characters
